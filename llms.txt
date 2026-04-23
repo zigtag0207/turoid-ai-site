@@ -1,0 +1,34 @@
+# Turoid
+
+Turoid is family office software for wealth management teams.
+
+## Summary
+
+- Turoid helps family offices, multi family offices, and private investment offices manage portfolio operations, reporting, reconciliation, trade controls, and AI-assisted investment workflows.
+- Wealth Pilot is the family office software layer for cross-custodian visibility, portfolio workflows, and control processes.
+- CIO Copilot is an AI CIO layer that sits on top of a firm's own data, manager notes, event calendars, and internal workflows.
+
+## Core Use Cases
+
+- Cross-custodian portfolio operations
+- Reporting and reconciliation
+- Trade controls and approvals
+- Investment committee preparation
+- AI CIO decision support
+
+## Audience
+
+- Family offices
+- Multi family offices
+- Private investment offices
+- Wealth management and investment operations teams
+
+## Website
+
+- Main site: https://www.turoid.ai/
+- LinkedIn: https://hk.linkedin.com/company/turoid
+
+## Important Notes
+
+- Turoid is designed to work with existing custodians, private banks, and document workflows.
+- CIO Copilot is intended to be grounded in a client's own portfolio and workflow context rather than generic market commentary.
