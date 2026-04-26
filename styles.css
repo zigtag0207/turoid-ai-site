@@ -997,6 +997,193 @@ li {
   padding: 1.35rem;
 }
 
+.seo-link-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.resource-card {
+  display: block;
+  min-height: 16rem;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 1.35rem;
+  background:
+    radial-gradient(circle at top right, rgba(13, 92, 99, 0.1), transparent 14rem),
+    rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease;
+}
+
+.resource-card:hover,
+.resource-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(13, 92, 99, 0.28);
+  outline: none;
+}
+
+.resource-card span,
+.guide-step span {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+}
+
+.resource-card h3,
+.guide-step h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.1;
+}
+
+.resource-card p,
+.guide-step p {
+  margin: 0.9rem 0 0;
+}
+
+.comparison-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: var(--shadow);
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(17, 20, 24, 0.08);
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison-table th {
+  color: var(--ink);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(13, 92, 99, 0.07);
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.guide-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.guide-step {
+  min-height: 17rem;
+  padding: 1.35rem;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: var(--shadow);
+}
+
+.assessment-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.assessment-form-card,
+.assessment-result {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.assessment-form-card h2,
+.assessment-result h2 {
+  margin: 0.35rem 0 1rem;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1;
+}
+
+.assessment-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.assessment-form fieldset {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid rgba(17, 20, 24, 0.1);
+  border-radius: 18px;
+}
+
+.assessment-form legend {
+  padding: 0 0.35rem;
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.assessment-form label {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  color: var(--muted);
+}
+
+.assessment-form input {
+  margin-top: 0.2rem;
+  accent-color: var(--accent);
+}
+
+.assessment-result {
+  position: sticky;
+  top: 6rem;
+}
+
+.score-ring {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 12rem;
+  aspect-ratio: 1;
+  margin: 1rem 0;
+  border-radius: 50%;
+  border: 1px solid rgba(13, 92, 99, 0.18);
+  background:
+    radial-gradient(circle at 34% 24%, rgba(211, 159, 67, 0.18), transparent 5rem),
+    rgba(13, 92, 99, 0.08);
+}
+
+.score-ring strong {
+  color: var(--accent);
+  font-size: 4.4rem;
+  line-height: 1;
+}
+
+.score-ring span {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
 .product-frame {
   position: relative;
   overflow: hidden;
@@ -1338,6 +1525,9 @@ li {
   .copilot-grid,
   .product-highlight,
   .seo-split,
+  .seo-link-grid,
+  .guide-steps,
+  .assessment-layout,
   .team-grid,
   .capability-grid,
   .three-up,
@@ -1374,6 +1564,10 @@ li {
 
   .product-frame-offset {
     transform: none;
+  }
+
+  .assessment-result {
+    position: static;
   }
 }
 
@@ -1423,8 +1617,21 @@ li {
   .faq-card,
   .team-card,
   .insight-card,
-  .capability-card {
+  .capability-card,
+  .resource-card,
+  .guide-step,
+  .assessment-form-card,
+  .assessment-result {
     border-radius: 22px;
+  }
+
+  .resource-card,
+  .guide-step {
+    min-height: auto;
+  }
+
+  .score-ring {
+    width: 10rem;
   }
 
   .section {
