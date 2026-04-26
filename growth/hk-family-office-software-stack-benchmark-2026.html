@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HK Family Office Software Stack Benchmark 2026</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      :root {
+        --ink: #111418;
+        --muted: #5c646d;
+        --soft: #f3efe7;
+        --panel: #ffffff;
+        --line: #d9d2c6;
+        --teal: #0d5c63;
+        --gold: #d39f43;
+        --blue: #12364a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--soft);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.45;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+        font-size: 9.6pt;
+      }
+
+      .page {
+        width: 210mm;
+        height: 297mm;
+        break-after: page;
+        page-break-after: always;
+        position: relative;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .page:last-child {
+        page-break-after: auto;
+      }
+
+      .cover {
+        height: 297mm;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        background:
+          radial-gradient(circle at 82% 18%, rgba(13, 92, 99, 0.18), transparent 45mm),
+          radial-gradient(circle at 16% 82%, rgba(211, 159, 67, 0.2), transparent 46mm),
+          linear-gradient(135deg, #f6f1e8 0%, #ebe2d4 100%);
+        border: 1px solid var(--line);
+        padding: 18mm;
+        overflow: hidden;
+      }
+
+      .cover::after {
+        content: "";
+        position: absolute;
+        right: -25mm;
+        bottom: 22mm;
+        width: 92mm;
+        height: 92mm;
+        border: 1px solid rgba(13, 92, 99, 0.2);
+        border-radius: 50%;
+      }
+
+      .brand-row,
+      .footer-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12mm;
+      }
+
+      .brand-row img {
+        width: 38mm;
+      }
+
+      .doc-label {
+        color: var(--teal);
+        font-size: 8pt;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .cover-main {
+        align-self: center;
+        max-width: 150mm;
+      }
+
+      .cover h1 {
+        margin-top: 7mm;
+        font-size: 36pt;
+        line-height: 0.98;
+        letter-spacing: -0.5px;
+      }
+
+      .cover .subtitle {
+        margin-top: 8mm;
+        max-width: 122mm;
+        color: #343b43;
+        font-size: 14pt;
+        line-height: 1.35;
+      }
+
+      .cover-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4mm;
+        margin-top: 14mm;
+      }
+
+      .cover-pill {
+        padding: 5mm;
+        border: 1px solid rgba(13, 92, 99, 0.22);
+        border-radius: 6mm;
+        background: rgba(255, 255, 255, 0.55);
+      }
+
+      .cover-pill strong {
+        display: block;
+        color: var(--ink);
+        font-size: 11pt;
+      }
+
+      .cover-pill span {
+        display: block;
+        margin-top: 1.5mm;
+        color: var(--muted);
+        font-size: 8.5pt;
+      }
+
+      .date {
+        color: var(--muted);
+        font-size: 9pt;
+      }
+
+      .report-page {
+        height: 297mm;
+        background: #fbfaf7;
+        border: 1px solid var(--line);
+        padding: 12mm;
+      }
+
+      .page-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 5mm;
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 8mm;
+      }
+
+      .page-head img {
+        width: 27mm;
+      }
+
+      .page-num {
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .section-title {
+        margin-bottom: 5.5mm;
+      }
+
+      .section-title h2 {
+        margin-top: 2mm;
+        font-size: 20pt;
+        line-height: 1.05;
+      }
+
+      .lede {
+        max-width: 154mm;
+        color: #2f363e;
+        font-size: 11pt;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5mm;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 5mm;
+        padding: 4.8mm;
+        break-inside: avoid;
+      }
+
+      .card h3 {
+        font-size: 11.8pt;
+        line-height: 1.2;
+        margin-bottom: 2.4mm;
+      }
+
+      .card ul {
+        padding-left: 5mm;
+        margin: 2.4mm 0 0;
+      }
+
+      .card li + li {
+        margin-top: 1.6mm;
+      }
+
+      .kicker {
+        display: inline-block;
+        margin-bottom: 2mm;
+        color: var(--teal);
+        font-size: 7.5pt;
+        font-weight: 700;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+      }
+
+      .benchmark-wheel {
+        position: relative;
+        width: 78mm;
+        height: 78mm;
+        margin: 6mm auto 3mm;
+        border-radius: 50%;
+        background:
+          conic-gradient(
+            from -90deg,
+            #0d5c63 0deg 72deg,
+            #12364a 72deg 144deg,
+            #d39f43 144deg 216deg,
+            #386b7a 216deg 288deg,
+            #8b7345 288deg 360deg
+          );
+        box-shadow: inset 0 0 0 11mm #fbfaf7, inset 0 0 0 12mm rgba(17, 20, 24, 0.08);
+      }
+
+      .wheel-core {
+        position: absolute;
+        inset: 25mm;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        border-radius: 50%;
+        background: #fff;
+        border: 1px solid var(--line);
+        padding: 5mm;
+        font-size: 8.8pt;
+        font-weight: 700;
+      }
+
+      .wheel-labels {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 3mm;
+        margin-top: 6mm;
+      }
+
+      .wheel-label {
+        border-left: 3px solid var(--teal);
+        padding-left: 3mm;
+        color: var(--muted);
+        font-size: 8pt;
+      }
+
+      .score-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 4mm;
+        background: #fff;
+        border-radius: 4mm;
+        overflow: hidden;
+      }
+
+      .score-table th,
+      .score-table td {
+        padding: 3.5mm;
+        border: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+        font-size: 9.2pt;
+      }
+
+      .score-table th {
+        color: var(--ink);
+        background: #eee6d8;
+      }
+
+      .score-table td:first-child {
+        width: 22mm;
+        color: var(--teal);
+        font-weight: 700;
+      }
+
+      .callout {
+        margin-top: 7mm;
+        padding: 6mm;
+        border-radius: 5mm;
+        background: #10252b;
+        color: #fff;
+      }
+
+      .callout p,
+      .callout li {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .callout h3 {
+        color: #fff;
+        font-size: 15pt;
+        margin-bottom: 2mm;
+      }
+
+      .pilot-flow {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 3mm;
+        margin-top: 6mm;
+      }
+
+      .pilot-step {
+        min-height: 29mm;
+        padding: 4mm;
+        border: 1px solid var(--line);
+        border-radius: 5mm;
+        background: #fff;
+      }
+
+      .pilot-step strong {
+        display: block;
+        color: var(--teal);
+        font-size: 16pt;
+        line-height: 1;
+      }
+
+      .pilot-step span {
+        display: block;
+        margin-top: 2mm;
+        color: var(--ink);
+        font-size: 9.3pt;
+        font-weight: 700;
+      }
+
+      .contact-box {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 6mm;
+        margin-top: 8mm;
+        padding: 7mm;
+        border-radius: 6mm;
+        background:
+          radial-gradient(circle at 92% 18%, rgba(211, 159, 67, 0.26), transparent 38mm),
+          #fff;
+        border: 1px solid var(--line);
+      }
+
+      .contact-box h2 {
+        font-size: 19pt;
+        line-height: 1.1;
+      }
+
+      .contact-box a,
+      .contact-box strong {
+        color: var(--teal);
+        font-weight: 700;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <div class="brand-row">
+        <img src="../assets/turoid-logo.png" alt="Turoid" />
+        <div class="doc-label">Benchmark Report</div>
+      </div>
+      <div class="cover-main">
+        <div class="doc-label">Hong Kong Family Office Software</div>
+        <h1>HK Family Office Software Stack Benchmark 2026</h1>
+        <p class="subtitle">
+          A practical operating benchmark for reporting, Excel risk, alternatives,
+          AI document workflows, and governance controls.
+        </p>
+        <div class="cover-grid">
+          <div class="cover-pill"><strong>5 layers</strong><span>Reporting, Excel, alternatives, AI, controls</span></div>
+          <div class="cover-pill"><strong>25-point score</strong><span>A quick maturity model for internal review</span></div>
+          <div class="cover-pill"><strong>30-day pilot</strong><span>A practical next step for family offices</span></div>
+        </div>
+      </div>
+      <div class="footer-row">
+        <p class="date">Prepared by Turoid | 2026</p>
+        <p class="date">www.turoid.ai</p>
+      </div>
+    </section>
+
+    <section class="page report-page">
+      <header class="page-head">
+        <img src="../assets/turoid-logo.png" alt="Turoid" />
+        <span class="page-num">01 / Executive Summary</span>
+      </header>
+      <div class="section-title">
+        <span class="kicker">Executive Summary</span>
+        <h2>Family offices usually feel the workflow pain before they name the software problem.</h2>
+      </div>
+      <p class="lede">
+        Hong Kong family offices rarely wake up with a clean software buying journey.
+        The need usually appears through recurring operating pain.
+      </p>
+      <div class="two-col" style="margin-top: 8mm;">
+        <div class="card">
+          <span class="kicker">Recurring pain</span>
+          <h3>What breaks first</h3>
+          <ul>
+            <li>Monthly reporting depends on too many bank files, fund PDFs, and Excel workbooks.</li>
+            <li>Alternative investments create document-heavy workflows around capital calls, distributions, NAVs, manager letters, and commitment tracking.</li>
+            <li>Investment teams want AI, but do not yet have controlled source data, review queues, or permissioned workflows.</li>
+            <li>Principals and CIOs want faster answers, but the operating team still spends too much time preparing the evidence.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="kicker">Benchmark use</span>
+          <h3>How to read this report</h3>
+          <p>
+            Use the five layers to identify where the current stack is stable,
+            where manual work is becoming risk, and where a focused AI or reporting
+            pilot can create value without a full transformation program.
+          </p>
+        </div>
+      </div>
+      <div class="benchmark-wheel">
+        <div class="wheel-core">Family Office Software Stack</div>
+      </div>
+      <div class="wheel-labels">
+        <div class="wheel-label">Portfolio reporting</div>
+        <div class="wheel-label">Excel risk</div>
+        <div class="wheel-label">Alternatives</div>
+        <div class="wheel-label">Document AI</div>
+        <div class="wheel-label">Controls</div>
+      </div>
+    </section>
+
+    <section class="page report-page">
+      <header class="page-head">
+        <img src="../assets/turoid-logo.png" alt="Turoid" />
+        <span class="page-num">02 / The Five Layers</span>
+      </header>
+      <div class="section-title">
+        <span class="kicker">Benchmark Layers</span>
+        <h2>The operating stack behind trusted family office reporting.</h2>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <span class="kicker">1. Portfolio Reporting</span>
+          <h3>Can the office create one trusted view?</h3>
+          <ul>
+            <li>Consolidated exposure across banks, custodians, private funds, and manually tracked assets.</li>
+            <li>Positions, cash, transactions, and performance checks traceable to sources.</li>
+            <li>Recurring reports regenerated with fewer one-off spreadsheet changes.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="kicker">2. Excel Risk</span>
+          <h3>Which workbooks are actually controls?</h3>
+          <ul>
+            <li>Separate harmless analysis files from operational controls.</li>
+            <li>Identify spreadsheets that contain decision records, approvals, exceptions, or critical calculations.</li>
+            <li>Reduce key-person dependency around month-end workbooks.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="kicker">3. Alternatives</span>
+          <h3>Can private fund data survive month end?</h3>
+          <ul>
+            <li>Track commitments, funded capital, unfunded capital, NAVs, distributions, and IRR by manager and vehicle.</li>
+            <li>Connect capital calls and distribution notices to evidence documents.</li>
+            <li>Search and summarize manager letters and fund reports.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="kicker">4. AI Documents</span>
+          <h3>Where can AI start safely?</h3>
+          <ul>
+            <li>Extract structured fields with source links and human review.</li>
+            <li>Route exceptions to the right person instead of burying them in chat history.</li>
+            <li>Retain evidence, confidence, and approval trails.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="kicker">5. Governance</span>
+          <h3>Can the team explain what changed?</h3>
+          <ul>
+            <li>Capture approvals in the same workflow as the underlying data.</li>
+            <li>Show who changed what and why.</li>
+            <li>Design permissions around roles, portfolios, and workflows.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="kicker">Warning signs</span>
+          <h3>The stack needs attention when...</h3>
+          <ul>
+            <li>The most important file is named with dates, initials, or "final final".</li>
+            <li>Private fund data is updated only when someone remembers to check the inbox.</li>
+            <li>AI output is copied into Excel without source evidence.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="page report-page">
+      <header class="page-head">
+        <img src="../assets/turoid-logo.png" alt="Turoid" />
+        <span class="page-num">03 / Maturity Scorecard</span>
+      </header>
+      <div class="section-title">
+        <span class="kicker">25-Point Score</span>
+        <h2>Score each layer from manual to AI-ready.</h2>
+      </div>
+      <table class="score-table">
+        <thead>
+          <tr>
+            <th>Score</th>
+            <th>Maturity level</th>
+            <th>What it usually means</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Manual and person-dependent</td>
+            <td>The workflow works because one person remembers the files, rules, exceptions, and timing.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Partially documented but spreadsheet-heavy</td>
+            <td>There is a repeatable process, but key controls and calculations still live in Excel or email.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Repeatable process with some controlled data</td>
+            <td>Core data is more structured, but exceptions, alts documents, or approvals still require manual handling.</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Workflow-driven with evidence and review</td>
+            <td>Data, documents, approvals, and reports are connected with clear source evidence and review steps.</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Integrated system with AI assistance</td>
+            <td>The office can use AI on controlled data and documents with evidence, permissions, and auditability.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="two-col" style="margin-top: 7mm;">
+        <div class="card">
+          <span class="kicker">Interpretation</span>
+          <h3>Total score</h3>
+          <ul>
+            <li>5-10: Stabilize reporting and data first.</li>
+            <li>11-16: Target the highest-friction recurring workflow.</li>
+            <li>17-22: Add document AI and exception handling.</li>
+            <li>23-25: Move toward AI-assisted CIO workflows grounded in controlled data.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="kicker">Best first use</span>
+          <h3>Run this as a 30-minute internal review</h3>
+          <p>
+            Ask the person who owns reporting, the person who owns alternatives, and the
+            person who signs off exceptions to score each layer independently. The gaps
+            usually reveal the first pilot.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page report-page">
+      <header class="page-head">
+        <img src="../assets/turoid-logo.png" alt="Turoid" />
+        <span class="page-num">04 / First 30-Day Pilot</span>
+      </header>
+      <div class="section-title">
+        <span class="kicker">Pilot Design</span>
+        <h2>Start with one workflow, not a full transformation program.</h2>
+      </div>
+      <p class="lede">
+        The best first pilot is narrow, recurring, measurable, and close to a real
+        operating pain. It should prove that better data, documents, controls, or AI can
+        reduce work without disrupting the whole office.
+      </p>
+      <div class="pilot-flow">
+        <div class="pilot-step"><strong>01</strong><span>Choose one recurring report</span></div>
+        <div class="pilot-step"><strong>02</strong><span>Pick one document type</span></div>
+        <div class="pilot-step"><strong>03</strong><span>Define one owner</span></div>
+        <div class="pilot-step"><strong>04</strong><span>Track one measurable output</span></div>
+        <div class="pilot-step"><strong>05</strong><span>Review one next action</span></div>
+      </div>
+      <div class="two-col" style="margin-top: 8mm;">
+        <div class="card">
+          <span class="kicker">Example pilots</span>
+          <h3>Good places to start</h3>
+          <ul>
+            <li>Turn a monthly private-bank statement workflow into a reviewed data pipeline.</li>
+            <li>Extract capital call and distribution details into a structured alternatives register.</li>
+            <li>Build an evidence-backed monthly portfolio report refresh workflow.</li>
+            <li>Create an AI assistant for manager letter search and briefing notes.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="kicker">Good pilot criteria</span>
+          <h3>Use a workflow that is already painful</h3>
+          <ul>
+            <li>It happens every month or quarter.</li>
+            <li>It has a clear owner.</li>
+            <li>It currently consumes manual time.</li>
+            <li>It can improve without replacing the whole stack.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout">
+        <h3>The practical test</h3>
+        <p>
+          If the pilot cannot show where data came from, who reviewed it, and what changed,
+          it is not ready to become part of the family office operating layer.
+        </p>
+      </div>
+    </section>
+
+    <section class="page report-page">
+      <header class="page-head">
+        <img src="../assets/turoid-logo.png" alt="Turoid" />
+        <span class="page-num">05 / About Turoid</span>
+      </header>
+      <div class="section-title">
+        <span class="kicker">How Turoid Helps</span>
+        <h2>Software and agentic AI for family office operations.</h2>
+      </div>
+      <p class="lede">
+        Turoid helps Hong Kong and Singapore family offices modernize portfolio
+        reporting, alternative investment operations, document processing, controls,
+        and AI-assisted CIO workflows.
+      </p>
+      <div class="two-col" style="margin-top: 8mm;">
+        <div class="card">
+          <span class="kicker">Typical starting points</span>
+          <h3>One practical workflow</h3>
+          <ul>
+            <li>Reporting and reconciliation</li>
+            <li>Alternative investment tracking</li>
+            <li>AI document extraction</li>
+            <li>Excel replacement</li>
+            <li>Approval controls</li>
+            <li>CIO briefing and question answering</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="kicker">Operating principle</span>
+          <h3>AI must stay grounded</h3>
+          <p>
+            CIO Copilot and document AI workflows should sit on top of a family's own
+            portfolio data, manager documents, internal notes, source evidence, and
+            approval workflows rather than generic market commentary.
+          </p>
+        </div>
+      </div>
+      <div class="contact-box">
+        <div>
+          <h2>Request a free 20-minute HK family office software audit.</h2>
+          <p style="margin-top: 3mm;">
+            Bring one workflow: monthly reporting, Excel consolidation, alternatives,
+            PDF handling, approvals, or AI document processing.
+          </p>
+        </div>
+        <div>
+          <p><strong>Email</strong><br /><a href="mailto:hello@turoid.ai">hello@turoid.ai</a></p>
+          <p style="margin-top: 4mm;"><strong>Audit page</strong><br />www.turoid.ai/hk-family-office-software-audit/</p>
+          <p style="margin-top: 4mm;"><strong>Office</strong><br />Sheung Wan, Hong Kong</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
