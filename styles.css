@@ -1003,6 +1003,10 @@ li {
   gap: 1rem;
 }
 
+.seo-section-links {
+  margin-top: 1.2rem;
+}
+
 .resource-card {
   display: block;
   min-height: 16rem;

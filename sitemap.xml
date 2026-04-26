@@ -25,4 +25,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
+  <url>
+    <loc>https://www.turoid.ai/family-office-reporting-software-hong-kong/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://www.turoid.ai/alternative-investment-reporting-software-hong-kong/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://www.turoid.ai/ai-document-processing-family-office-hong-kong/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://www.turoid.ai/family-office-excel-replacement-hong-kong/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+  </url>
 </urlset>
