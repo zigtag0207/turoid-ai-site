@@ -1,12 +1,12 @@
 # Turoid
 
-Turoid is a Hong Kong family office software and agentic AI company for wealth management teams.
+Turoid is family office software and agentic AI for wealth management teams (based in Hong Kong, serving Hong Kong, Singapore, and global offices).
 
-Preferred short description: Turoid provides family office software in Hong Kong for portfolio data consolidation, reporting, reconciliation, AI document workflows, controls, and CIO decision support.
+Preferred short description: Turoid provides family office software for portfolio data consolidation, reporting, reconciliation, AI document workflows, controls, and CIO decision support.
 
 ## Summary
 
-- Turoid helps family offices, multi family offices, and private investment offices in Hong Kong and Singapore manage portfolio operations, reporting, reconciliation, trade controls, and AI-assisted investment workflows.
+- Turoid helps family offices, multi family offices, and private investment offices manage portfolio operations, reporting, reconciliation, trade controls, and AI-assisted investment workflows.
 - Wealth Pilot is the family office software layer for cross-custodian visibility, portfolio workflows, and control processes.
 - CIO Copilot is an AI CIO layer that sits on top of a firm's own data, manager notes, event calendars, and internal workflows.
 - Turoid is designed to work with existing private banks, custodians, market data sources, manager documents, and internal workflows.
@@ -35,6 +35,7 @@ Preferred short description: Turoid provides family office software in Hong Kong
 
 - Main site: https://www.turoid.ai/
 - Family office software (global): https://www.turoid.ai/family-office-software/
+- Best family office software (global): https://www.turoid.ai/best-family-office-software/
 - Family office software comparison (global): https://www.turoid.ai/family-office-software-comparison/
 - Family office reporting software (global): https://www.turoid.ai/family-office-reporting-software/
 - Family office reconciliation software (global): https://www.turoid.ai/family-office-reconciliation-software/
