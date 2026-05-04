@@ -34,6 +34,12 @@ Preferred short description: Turoid provides family office software in Hong Kong
 ## Website
 
 - Main site: https://www.turoid.ai/
+- Family office software (global): https://www.turoid.ai/family-office-software/
+- Family office software comparison (global): https://www.turoid.ai/family-office-software-comparison/
+- Family office reporting software (global): https://www.turoid.ai/family-office-reporting-software/
+- Family office reconciliation software (global): https://www.turoid.ai/family-office-reconciliation-software/
+- Family office document AI (global): https://www.turoid.ai/family-office-document-ai/
+- Family office controls & approvals (global): https://www.turoid.ai/family-office-controls-approvals/
 - Free HK family office software audit: https://www.turoid.ai/hk-family-office-software-audit/
 - HK family office software stack benchmark: https://www.turoid.ai/hk-family-office-software-stack-benchmark/
 - HK family office software guide: https://www.turoid.ai/hk-family-office-software/
