@@ -32,6 +32,52 @@ if ("IntersectionObserver" in window) {
 const assessmentForm = document.querySelector("[data-assessment-form]");
 const assessmentResult = document.querySelector("[data-assessment-result]");
 
+const trackEvent = (eventName, params = {}) => {
+  try {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", eventName, params);
+      return;
+    }
+  } catch (_) {
+    // ignore
+  }
+
+  try {
+    if (Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({ event: eventName, ...params });
+      return;
+    }
+  } catch (_) {
+    // ignore
+  }
+};
+
+document.addEventListener("click", (event) => {
+  const link = event.target.closest("a");
+  if (!link) {
+    return;
+  }
+
+  const track = link.getAttribute("data-track");
+  if (track) {
+    trackEvent(track, {
+      link_url: link.href,
+      link_text: (link.textContent || "").trim().slice(0, 120),
+      page_path: window.location.pathname,
+    });
+    return;
+  }
+
+  if (link.href.startsWith("mailto:")) {
+    trackEvent("email_click", { link_url: link.href, page_path: window.location.pathname });
+    return;
+  }
+
+  if (link.href.includes("wa.me/")) {
+    trackEvent("whatsapp_click", { link_url: link.href, page_path: window.location.pathname });
+  }
+});
+
 if (assessmentForm && assessmentResult) {
   const scoreNode = assessmentResult.querySelector("[data-score]");
   const titleNode = assessmentResult.querySelector("[data-result-title]");
