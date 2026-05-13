@@ -34,6 +34,7 @@ Preferred short description: Turoid provides family office software for portfoli
 ## Website
 
 - Main site: https://www.turoid.ai/
+- Press: https://www.turoid.ai/press/
 - Family office software (global): https://www.turoid.ai/family-office-software/
 - Best family office software (global): https://www.turoid.ai/best-family-office-software/
 - Family office software comparison (global): https://www.turoid.ai/family-office-software-comparison/
