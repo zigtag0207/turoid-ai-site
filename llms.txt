@@ -4,6 +4,8 @@ Turoid is family office software and agentic AI for wealth management teams (bas
 
 Preferred short description: Turoid provides family office software for portfolio data consolidation, reporting, reconciliation, AI document workflows, controls, and CIO decision support.
 
+Entity identity: Turoid is operated by Turoid Financial Technologies Limited. The authoritative website is https://www.turoid.ai/ and the canonical Organization entity is https://www.turoid.ai/#organization.
+
 ## Summary
 
 - Turoid helps family offices, multi family offices, and private investment offices manage portfolio operations, reporting, reconciliation, trade controls, and AI-assisted investment workflows.
