@@ -32,6 +32,7 @@ The current site is a static HTML/CSS/JS website hosted from this repository. Th
 - `_redirects`: apex-to-www redirect rules.
 - `_headers`: deployment headers.
 - `handover/revamp-brief.md`: business/design brief.
+- `handover/remote-colleague-setup.md`: setup instructions for a colleague using their own machine.
 - `handover/seo-and-launch-checklist.md`: required approval checklist.
 - `handover/message-to-colleague.md`: ready-to-send handover note.
 
@@ -78,6 +79,8 @@ Then open:
 http://localhost:8080/
 ```
 
+If working from another machine, follow `handover/remote-colleague-setup.md` first.
+
 ## Suggested Pull Request Format
 
 Use this PR summary:
@@ -105,4 +108,3 @@ Use this PR summary:
 
 - 
 ```
-
