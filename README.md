@@ -9,6 +9,7 @@ This is a static HTML/CSS/JS website for Turoid.
 If you are helping with the website revamp, start here:
 
 - `HANDOVER.md`
+- `handover/remote-colleague-setup.md`
 - `handover/revamp-brief.md`
 - `handover/seo-and-launch-checklist.md`
 - `handover/message-to-colleague.md`
@@ -27,4 +28,3 @@ Then open:
 ```text
 http://localhost:8080/
 ```
-

@@ -21,6 +21,7 @@ Please do not edit `main` directly. `main` is the production branch.
 I added handover notes in the repo:
 
 - `HANDOVER.md`
+- `handover/remote-colleague-setup.md`
 - `handover/revamp-brief.md`
 - `handover/seo-and-launch-checklist.md`
 
@@ -44,4 +45,3 @@ When ready, please send me:
 5. A pull request into `main`.
 
 I will review and approve before anything goes live.
-
