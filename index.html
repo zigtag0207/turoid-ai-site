@@ -142,28 +142,80 @@
   </head>
   <body>
     <div class="site-shell">
-      <header class="site-header">
+        <header class="site-header">
         <div class="container nav-row">
-          <a class="brand" href="#top" aria-label="Turoid home">
-            <img src="./assets/turoid-logo.png" alt="Turoid logo" />
+          <a class="brand" href="/" aria-label="Turoid home">
+            <img src="/assets/turoid-logo.png" alt="Turoid logo" />
           </a>
 
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open mobile menu">
+            Menu
+            <span aria-hidden="true">▾</span>
+          </button>
+
           <nav class="site-nav" aria-label="Primary">
-            <a href="./family-office-software/">Family Office Software</a>
-            <a href="./hk-family-office-software/">HK Family Office Software</a>
-            <a href="./best-family-office-software-hong-kong/">Compare</a>
-            <a href="./hk-family-office-software-readiness-assessment/">Assessment</a>
-            <a href="#agentic-ai">Agentic AI</a>
-            <a href="#use-cases">Use Cases</a>
-            <a href="#team">Team</a>
-            <a href="#media">Media</a>
-            <a href="#contact">Contact</a>
+            <div class="nav-dropdown">
+              <button type="button" class="nav-trigger" aria-expanded="false">Product</button>
+              <div class="dropdown-panel" aria-hidden="true">
+                <a href="/family-office-software/">Family Office Software</a>
+                <a href="/hk-family-office-software/">HK Family Office Software</a>
+                <a href="/best-family-office-software-hong-kong/">Compare</a>
+                <a href="/hk-family-office-software-readiness-assessment/">Assessment</a>
+              </div>
+            </div>
+            <div class="nav-dropdown">
+              <button type="button" class="nav-trigger" aria-expanded="false">Solutions</button>
+              <div class="dropdown-panel" aria-hidden="true">
+                <a href="/#agentic-ai">Agentic AI</a>
+                <a href="/#use-cases">Use Cases</a>
+              </div>
+            </div>
+            <div class="nav-dropdown">
+              <button type="button" class="nav-trigger" aria-expanded="false">Resources</button>
+              <div class="dropdown-panel" aria-hidden="true">
+                <a href="/#media">Turoid in the Market</a>
+              </div>
+            </div>
+            <div class="nav-dropdown">
+              <button type="button" class="nav-trigger" aria-expanded="false">Company</button>
+              <div class="dropdown-panel" aria-hidden="true">
+                <a href="/#team">Team</a>
+                <a href="/#contact">Contact</a>
+              </div>
+            </div>
           </nav>
 
           <div class="header-actions">
             <a class="button button-small" href="mailto:hello@turoid.ai?subject=Request%20a%20Turoid%20demo">
               Request a demo
             </a>
+          </div>
+        </div>
+
+        <div id="mobile-nav-panel" class="mobile-nav-panel" aria-hidden="true">
+          <details class="mobile-nav-group">
+            <summary>Product</summary>
+            <a href="/family-office-software/">Family Office Software</a>
+            <a href="/hk-family-office-software/">HK Family Office Software</a>
+            <a href="/best-family-office-software-hong-kong/">Compare</a>
+            <a href="/hk-family-office-software-readiness-assessment/">Assessment</a>
+          </details>
+          <details class="mobile-nav-group">
+            <summary>Solutions</summary>
+            <a href="/#agentic-ai">Agentic AI</a>
+            <a href="/#use-cases">Use Cases</a>
+          </details>
+          <details class="mobile-nav-group">
+            <summary>Resources</summary>
+            <a href="/#media">Turoid in the Market</a>
+          </details>
+          <details class="mobile-nav-group">
+            <summary>Company</summary>
+            <a href="/#team">Team</a>
+            <a href="/#contact">Contact</a>
+          </details>
+          <div class="mobile-nav-actions">
+            <a class="button button-small" href="mailto:hello@turoid.ai?subject=Request%20a%20Turoid%20demo">Request a demo</a>
           </div>
         </div>
       </header>
@@ -246,6 +298,24 @@
           </div>
         </section>
 
+        <section class="recognition-section">
+          <div class="container recognition-card reveal">
+            <div class="recognition-image">
+              <img src="/assets/wealthbriefingasia-awards-2026-turoid.png"
+                alt="Turoid winner of WealthBriefingAsia Greater China Awards 2026 Best Innovative Technology Solution"
+                width="1949"
+                height="807" />
+            </div>
+            <div class="recognition-copy">
+              <p class="eyebrow">Award recognition</p>
+              <h2>Winner — Best Innovative Technology Solution</h2>
+              <p>
+                Turoid was recognised at the WealthBriefingAsia Greater China Awards 2026 for its approach to agentic AI across family-office operations, reporting, and workflow automation.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section class="ecosystem-strip">
           <div class="container ecosystem-strip-inner reveal">
             <p class="eyebrow">Ecosystem</p>
@@ -263,27 +333,63 @@
               <p class="eyebrow">Agentic AI</p>
               <h2>One AI layer across investment, operations, and control</h2>
               <p>
-                Family offices do not need another isolated dashboard. They need agents
-                that can read internal context, monitor exposures, prepare decisions,
-                and coordinate work across the investment office.
+                Turoid connects portfolio insight, operational execution, and control workflows in one AI-assisted system — so teams can move faster without losing oversight.
               </p>
             </div>
 
             <div class="agentic-grid">
               <article class="agentic-card reveal">
+                <div class="card-graphic" aria-hidden="true">
+                  <svg viewBox="0 0 264 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 26h156l20 12v22L208 74H52L32 62V38Z" fill="rgba(255,255,255,0.06)" stroke="rgba(245,242,234,0.16)" stroke-width="1.4"/>
+                    <path d="M54 34h124" stroke="rgba(245,242,234,0.22)" stroke-width="1.4" stroke-linecap="round"/>
+                    <path d="M54 46h92" stroke="rgba(245,242,234,0.22)" stroke-width="1.4" stroke-linecap="round"/>
+                    <path d="M54 58h68" stroke="rgba(245,242,234,0.22)" stroke-width="1.4" stroke-linecap="round"/>
+                    <path d="M50 26l-18 10v24l18 10" stroke="rgba(245,242,234,0.12)" stroke-width="1.2"/>
+                    <path d="M206 38l18 10v24l-18 10" stroke="rgba(245,242,234,0.12)" stroke-width="1.2"/>
+                    <path d="M32 62l20 12h156l20-12" stroke="rgba(245,242,234,0.12)" stroke-width="1.2"/>
+                    <path class="drift" d="M88 24l20-10 20 10" stroke="#d39f43" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.85"/>
+                    <circle class="drift" cx="92" cy="44" r="3.5" fill="#0d5c63"/>
+                    <circle cx="168" cy="52" r="2.8" fill="#f5f2ea" opacity="0.85"/>
+                  </svg>
+                </div>
                 <span>01</span>
-                <h3>Understand</h3>
-                <p>Connect custodians, documents, manager notes, holdings, events, and mandate rules.</p>
+                <h3>Understand the operating context</h3>
+                <p>Connect custodians, documents, manager notes, holdings, events, and mandate rules into one structured operating layer.</p>
               </article>
               <article class="agentic-card reveal">
+                <div class="card-graphic" aria-hidden="true">
+                  <svg viewBox="0 0 264 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M64 88h46l30-18V44l-30-18H64l-30 18v26l30 18Z" fill="rgba(255,255,255,0.06)" stroke="rgba(245,242,234,0.16)" stroke-width="1.4"/>
+                    <path d="M136 66h46l30-18V22l-30-18h-46l-30 18v26l30 18Z" fill="rgba(255,255,255,0.05)" stroke="rgba(245,242,234,0.16)" stroke-width="1.4"/>
+                    <path d="M86 36l50-30 50 30" stroke="rgba(245,242,234,0.18)" stroke-width="1.4" fill="none"/>
+                    <path d="M86 76l50-30 50 30" stroke="rgba(245,242,234,0.18)" stroke-width="1.4" fill="none"/>
+                    <path d="M94 84v-46" stroke="#d39f43" stroke-width="1.6" stroke-linecap="round"/>
+                    <circle class="drift" cx="74" cy="56" r="3.4" fill="#0d5c63"/>
+                    <circle cx="190" cy="32" r="2.8" fill="#f5f2ea" opacity="0.88"/>
+                    <path d="M110 30l20-14 20 14" stroke="rgba(245,242,234,0.2)" stroke-width="1.2" fill="none"/>
+                  </svg>
+                </div>
                 <span>02</span>
-                <h3>Reason</h3>
-                <p>Ask questions across your own data and receive evidence-backed investment context.</p>
+                <h3>Reason across portfolio and documents</h3>
+                <p>Ask questions across internal data and receive evidence-backed investment, reporting, and risk context.</p>
               </article>
               <article class="agentic-card reveal">
+                <div class="card-graphic" aria-hidden="true">
+                  <svg viewBox="0 0 264 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="34" y="28" width="196" height="26" rx="11" fill="rgba(255,255,255,0.06)" stroke="rgba(245,242,234,0.15)" stroke-width="1.4"/>
+                    <rect x="54" y="56" width="174" height="24" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(245,242,234,0.14)" stroke-width="1.4"/>
+                    <rect x="74" y="84" width="150" height="22" rx="9" fill="rgba(255,255,255,0.04)" stroke="rgba(245,242,234,0.12)" stroke-width="1.4"/>
+                    <path d="M90 42h84" stroke="#d39f43" stroke-width="1.6" stroke-linecap="round"/>
+                    <path class="drift" d="M90 70h48M156 70h18" stroke="#0d5c63" stroke-width="1.6" stroke-linecap="round"/>
+                    <path d="M125 72v22" stroke="rgba(245,242,234,0.18)" stroke-width="1.2" stroke-linecap="round"/>
+                    <circle cx="110" cy="42" r="2.8" fill="#f5f2ea" opacity="0.88"/>
+                    <circle class="drift" cx="170" cy="66" r="3.4" fill="#0d5c63"/>
+                  </svg>
+                </div>
                 <span>03</span>
-                <h3>Act</h3>
-                <p>Route approvals, prepare reports, monitor exceptions, and coordinate the next workflow.</p>
+                <h3>Act through approved workflows</h3>
+                <p>Route approvals, prepare reports, monitor exceptions, and coordinate the next workflow with auditability built in.</p>
               </article>
             </div>
           </div>
@@ -490,7 +596,8 @@
               </p>
             </div>
 
-            <div class="media-grid">
+            <div class="media-grid media-marquee" aria-label="Media coverage marquee">
+              <div class="media-track">
               <article class="media-card reveal">
                 <p class="media-meta">Hubbis • Jan 26, 2026</p>
                 <h3>Annum Capital & Turoid: Co-Pilots in AI Transformation</h3>
@@ -550,6 +657,7 @@
                   Visit company page
                 </a>
               </article>
+              </div>
             </div>
           </div>
         </section>
@@ -636,51 +744,69 @@
               </p>
             </div>
 
-            <div class="faq-grid">
-              <article class="faq-card reveal">
-                <h3>What is Turoid?</h3>
-                <p>
+            <div class="faq-grid faq-accordion">
+              <article class="faq-card faq-item reveal">
+                <h3><button class="faq-button" id="faq-btn-1" data-faq-button aria-controls="faq-panel-1" aria-expanded="false">What is Turoid?</button>
+                </h3>
+                <div id="faq-panel-1" class="faq-panel" aria-hidden="true">
+                  <p>
                   Turoid is family office software for Hong Kong and Singapore wealth
                   management teams that need better portfolio operations, reporting,
                   reconciliation, trade controls, and AI-assisted decision support.
                 </p>
+                </div>
               </article>
-              <article class="faq-card reveal">
-                <h3>Who is Turoid built for?</h3>
-                <p>
+              <article class="faq-card faq-item reveal">
+                <h3><button class="faq-button" id="faq-btn-2" data-faq-button aria-controls="faq-panel-2" aria-expanded="false">Who is Turoid built for?</button>
+                </h3>
+                <div id="faq-panel-2" class="faq-panel" aria-hidden="true">
+                  <p>
                   Turoid is built for family offices, multi family offices, private investment
                   offices, and wealth teams managing complex portfolios across multiple data sources.
                 </p>
+                </div>
               </article>
-              <article class="faq-card reveal">
-                <h3>What makes CIO Copilot different?</h3>
-                <p>
+              <article class="faq-card faq-item reveal">
+                <h3><button class="faq-button" id="faq-btn-3" data-faq-button aria-controls="faq-panel-3" aria-expanded="false">What makes CIO Copilot different?</button>
+                </h3>
+                <div id="faq-panel-3" class="faq-panel" aria-hidden="true">
+                  <p>
                   CIO Copilot sits on top of your own data, manager notes, event calendars,
                   and workflows so answers are grounded in your operating reality, not generic market commentary.
                 </p>
+                </div>
               </article>
-              <article class="faq-card reveal">
-                <h3>Does Turoid replace existing custodians and private banks?</h3>
-                <p>
+              <article class="faq-card faq-item reveal">
+                <h3><button class="faq-button" id="faq-btn-4" data-faq-button aria-controls="faq-panel-4" aria-expanded="false">Does Turoid replace existing custodians and private banks?</button>
+                </h3>
+                <div id="faq-panel-4" class="faq-panel" aria-hidden="true">
+                  <p>
                   No. Turoid is designed to work with existing custodians, private banks,
                   market data sources, and document workflows so teams can modernize without a total reset.
                 </p>
+                </div>
               </article>
-              <article class="faq-card reveal">
-                <h3>Does Turoid serve Hong Kong family offices?</h3>
-                <p>
+              <article class="faq-card faq-item reveal">
+                <h3><button class="faq-button" id="faq-btn-5" data-faq-button aria-controls="faq-panel-5" aria-expanded="false">Does Turoid serve Hong Kong family offices?</button>
+                </h3>
+                <div id="faq-panel-5" class="faq-panel" aria-hidden="true">
+                  <p>
                   Yes. Turoid is based in Sheung Wan, Hong Kong and is built for family
                   offices, multi family offices, and private investment teams operating
                   across Hong Kong, Singapore, and global custodian relationships.
                 </p>
+                </div>
               </article>
-              <article class="faq-card reveal">
-                <h3>What should HK family offices look for in software?</h3>
-                <p>
+              <article class="faq-card faq-item reveal">
+                <h3><button class="faq-button" id="faq-btn-6" data-faq-button aria-controls="faq-panel-6" aria-expanded="false">What should HK family offices look for in software?</button>
+                </h3>
+                <div id="faq-panel-6" class="faq-panel" aria-hidden="true">
+                  <p>
                   Look for cross-bank data consolidation, alternative investment reporting,
                   document intelligence, approval controls, and AI workflows that stay
                   grounded in your own portfolio and operating context.
                 </p>
+                </div>
               </article>
             </div>
           </div>
