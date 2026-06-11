@@ -934,6 +934,11 @@ section[id] {
 
 .section-product {
   position: relative;
+  padding: 5.75rem 0 5.25rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(247, 241, 231, 0.56));
+  border-top: 1px solid rgba(17, 20, 24, 0.06);
+  border-bottom: 1px solid rgba(17, 20, 24, 0.06);
 }
 
 .section-product::before,
@@ -945,21 +950,36 @@ section[id] {
 }
 
 .section-product::before {
-  inset: 8% auto auto 62%;
-  width: 24rem;
-  height: 24rem;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(13, 92, 99, 0.16), transparent 70%);
-  filter: blur(18px);
-}
-
-.section-product::after {
-  inset: auto auto 4% 8%;
+  inset: 12% auto auto 64%;
   width: 22rem;
   height: 22rem;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(211, 159, 67, 0.14), transparent 70%);
-  filter: blur(18px);
+  background: radial-gradient(circle, rgba(13, 92, 99, 0.11), transparent 70%);
+  filter: blur(16px);
+}
+
+.section-product::after {
+  inset: auto auto 8% 8%;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(211, 159, 67, 0.11), transparent 70%);
+  filter: blur(16px);
+}
+
+.section-product .section-heading {
+  max-width: 62rem;
+  margin-bottom: 2.35rem;
+}
+
+.section-product .section-heading h2 {
+  max-width: 18ch;
+}
+
+.section-product .section-heading p {
+  max-width: 64ch;
+  font-size: 1.06rem;
+  line-height: 1.68;
 }
 
 .section-dark {
@@ -1053,42 +1073,50 @@ section[id] {
 .agentic-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.15rem;
+  align-items: stretch;
 }
 
 .agentic-card {
-  min-height: 18rem;
-  padding: 1.4rem;
-  border-radius: 28px;
-  border: 1px solid var(--line);
+  min-height: 21rem;
+  padding: 1.6rem;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   background:
-    radial-gradient(circle at top right, rgba(13, 92, 99, 0.12), transparent 14rem),
-    rgba(255, 255, 255, 0.54);
-  backdrop-filter: blur(18px);
-  box-shadow: var(--shadow);
+    radial-gradient(circle at top right, rgba(13, 92, 99, 0.22), transparent 16rem),
+    linear-gradient(180deg, rgba(18, 24, 31, 0.96), rgba(12, 16, 22, 0.96));
+  backdrop-filter: blur(14px);
+  box-shadow: 0 22px 54px rgba(10, 16, 22, 0.16);
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  align-content: start;
 }
 
 .agentic-card span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
+  width: 2.2rem;
+  height: 2.2rem;
   border-radius: 50%;
-  background: rgba(13, 92, 99, 0.1);
-  color: var(--accent);
-  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.09);
+  color: rgba(245, 242, 234, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  font-size: 0.78rem;
 }
 
 .agentic-card h3 {
-  margin: 5rem 0 0;
-  font-size: clamp(1.7rem, 4vw, 2.55rem);
-  line-height: 0.98;
+  margin: 2.25rem 0 0;
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  line-height: 1.06;
+  color: #f5f2ea;
 }
 
 .agentic-card p {
   margin: 1rem 0 0;
   font-size: 1rem;
+  line-height: 1.62;
+  color: rgba(245, 242, 234, 0.76);
 }
 
 .product-highlight {
@@ -1864,6 +1892,25 @@ section[id] {
   .assessment-result {
     position: static;
   }
+
+  .section-product {
+    padding: 5rem 0 4.7rem;
+  }
+
+  .section-product .section-heading {
+    margin-bottom: 2rem;
+  }
+
+  .section-product .agentic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .section-product .agentic-card {
+    min-height: 19.5rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1936,6 +1983,38 @@ section[id] {
   .agentic-visual {
     min-height: 33rem;
     padding: 0.7rem;
+  }
+
+  .section-product {
+    padding: 4.2rem 0 4rem;
+  }
+
+  .section-product .section-heading {
+    margin-bottom: 1.6rem;
+  }
+
+  .section-product .section-heading h2 {
+    max-width: none;
+  }
+
+  .section-product .section-heading p {
+    font-size: 1rem;
+    line-height: 1.58;
+  }
+
+  .section-product .agentic-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .section-product .agentic-card {
+    min-height: auto;
+    padding: 1.35rem;
+  }
+
+  .section-product .agentic-card h3 {
+    margin-top: 1.35rem;
+    font-size: 1.45rem;
   }
 
   .agentic-visual::before {
