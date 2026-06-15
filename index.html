@@ -575,7 +575,16 @@
               </p>
             </div>
 
-            <div class="media-grid media-marquee" aria-label="Media coverage marquee">
+            <div class="media-controls reveal" aria-label="Media carousel controls">
+              <button type="button" class="media-nav-button" data-media-prev aria-label="Show previous media cards">
+                <span aria-hidden="true">←</span>
+              </button>
+              <button type="button" class="media-nav-button" data-media-next aria-label="Show next media cards">
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+
+            <div class="media-grid media-marquee" aria-label="Media coverage carousel" tabindex="0">
               <div class="media-track">
               <article class="media-card reveal">
                 <p class="media-meta">Hubbis • Jan 26, 2026</p>
@@ -716,30 +725,36 @@
 
         <section class="section" id="home-resources">
           <div class="container">
-            <div class="section-heading reveal">
-              <p class="eyebrow">Hong Kong Guides</p>
-              <h2>Resources for choosing family office software in Hong Kong</h2>
-              <p>
-                Practical pages for family offices comparing vendors, replacing Excel-heavy
-                reporting, and deciding where AI belongs in their operating model.
-              </p>
+            <div class="home-resources-hub-heading reveal">
+              <h2>Resources for choosing family office software by market</h2>
             </div>
 
-            <div class="home-resources-featured">
-              <a class="resource-card reveal is-featured-entry" href="./family-office-software-hong-kong/">
-                <span>Category page</span>
-                <h3>Family Office Software in Hong Kong</h3>
-                <p>The full explanation of Turoid for Hong Kong family offices and private investment teams.</p>
-                <p class="resource-view-page">View page <span aria-hidden="true">→</span></p>
-              </a>
-            </div>
+            <div class="home-resources-subsections">
+            <div class="home-resources-subsection home-resources-subsection-hk">
+              <div class="home-resources-subsection-heading reveal">
+                <p class="eyebrow">Hong Kong Guides</p>
+                <h3>Resources for choosing family office software in Hong Kong</h3>
+                <p>
+                  Practical pages for family offices comparing vendors, replacing Excel-heavy
+                  reporting, and deciding where AI belongs in their operating model.
+                </p>
+              </div>
 
-            <div class="home-resources-divider" aria-label="All resources divider">
-              <span>ALL RESOURCES</span>
-            </div>
+              <div class="home-resources-featured">
+                <a class="resource-card reveal is-featured-entry" href="./family-office-software-hong-kong/">
+                  <span>Category page</span>
+                  <h3>Family Office Software in Hong Kong</h3>
+                  <p>The full explanation of Turoid for Hong Kong family offices and private investment teams.</p>
+                  <p class="resource-view-page">View page <span aria-hidden="true">→</span></p>
+                </a>
+              </div>
 
-            <div class="home-resources-compact">
-              <div class="seo-link-grid">
+              <div class="home-resources-divider" aria-label="All resources divider">
+                <span>ALL RESOURCES</span>
+              </div>
+
+              <div class="home-resources-compact">
+                <div class="seo-link-grid">
               <a class="resource-card reveal is-compact-entry" href="./hk-family-office-software-stack-benchmark/">
                 <span>Benchmark</span>
                 <h3>HK Family Office Software Stack Benchmark</h3>
@@ -800,7 +815,56 @@
                 <p>Move recurring reporting, approvals, and data workflows out of fragile spreadsheets.</p>
                 <p class="resource-view-page">View page <span aria-hidden="true">→</span></p>
               </a>
+                </div>
               </div>
+            </div>
+
+            <div class="home-resources-subsection home-resources-subsection-sg">
+              <div class="home-resources-subsection-heading reveal">
+                <p class="eyebrow">SINGAPORE GUIDES</p>
+                <h3>Resources for choosing family office software in Singapore</h3>
+                <p>
+                  Practical pages for Singapore family offices reviewing software options,
+                  reporting workflows, and implementation readiness.
+                </p>
+              </div>
+
+              <div class="home-resources-featured">
+                <a class="resource-card reveal is-featured-entry is-featured-entry-sg" href="./family-office-software-singapore/">
+                  <span>Category page</span>
+                  <h3>Family Office Software Singapore</h3>
+                  <p>The practical guide to family office software choices and operating models in Singapore.</p>
+                  <p class="resource-view-page">View page <span aria-hidden="true">→</span></p>
+                </a>
+              </div>
+
+              <div class="home-resources-divider" aria-label="All resources divider">
+                <span>ALL RESOURCES</span>
+              </div>
+
+              <div class="home-resources-compact">
+                <div class="seo-link-grid">
+                  <a class="resource-card reveal is-compact-entry" href="./best-family-office-software-singapore/">
+                    <span>Comparison</span>
+                    <h3>Best Family Office Software Singapore</h3>
+                    <p>A buyer-style comparison of family office software options in Singapore.</p>
+                    <p class="resource-view-page">View page <span aria-hidden="true">→</span></p>
+                  </a>
+                  <a class="resource-card reveal is-compact-entry" href="./family-office-reporting-software-singapore/">
+                    <span>Reporting</span>
+                    <h3>Family Office Reporting Software Singapore</h3>
+                    <p>Reporting workflows for portfolio packs, recurring updates, and stakeholder communication.</p>
+                    <p class="resource-view-page">View page <span aria-hidden="true">→</span></p>
+                  </a>
+                  <a class="resource-card reveal is-compact-entry" href="./sg-family-office-software-audit/">
+                    <span>Audit</span>
+                    <h3>Singapore Family Office Software Audit</h3>
+                    <p>A practical audit framework to evaluate software readiness and operational priorities.</p>
+                    <p class="resource-view-page">View page <span aria-hidden="true">→</span></p>
+                  </a>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
         </section>
