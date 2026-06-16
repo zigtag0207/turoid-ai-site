@@ -4,19 +4,16 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
-const mediaCarousel = document.querySelector(".media-grid.media-marquee");
-const mediaTrack = document.querySelector(".media-track");
-const mediaPrevButton = document.querySelector("[data-media-prev]");
-const mediaNextButton = document.querySelector("[data-media-next]");
+const mediaCarousel = document.querySelector("#media .media-pages.media-marquee");
+const mediaPages = document.querySelectorAll("#media .media-page");
+const mediaPrevButton = document.querySelector("#media [data-media-prev]");
+const mediaNextButton = document.querySelector("#media [data-media-next]");
 
-if (mediaCarousel && mediaTrack && mediaPrevButton && mediaNextButton) {
+if (mediaCarousel && mediaPages.length > 0 && mediaPrevButton && mediaNextButton) {
   const getMediaStep = () => {
-    const firstCard = mediaTrack.querySelector(".media-card");
-    const cardWidth = firstCard instanceof HTMLElement ? firstCard.getBoundingClientRect().width : 0;
-    const styles = window.getComputedStyle(mediaTrack);
-    const gap = Number.parseFloat(styles.columnGap || styles.gap || "0") || 0;
-    const viewportStep = mediaCarousel.clientWidth * 0.82;
-    return Math.max(cardWidth + gap, viewportStep, 220);
+    const firstPage = mediaPages[0];
+    const pageWidth = firstPage instanceof HTMLElement ? firstPage.getBoundingClientRect().width : 0;
+    return Math.max(pageWidth, mediaCarousel.clientWidth, 220);
   };
 
   const updateMediaButtons = () => {
