@@ -2433,34 +2433,76 @@ section[id] {
   }
 
   .home-hero .hero-visual {
-    width: min(100%, 24.5rem);
+    width: min(100%, calc(100vw - 2.5rem), 24.5rem);
   }
 
   .home-hero .agentic-visual {
-    min-height: 22rem;
+    min-height: 31rem;
+    align-content: start;
+    align-items: start;
+    justify-items: stretch;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 0.78rem;
+    padding: 1.1rem;
   }
 
   .home-hero .agentic-core {
-    width: min(48%, 12.75rem);
-    padding: 1.2rem;
+    position: relative;
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(48%, 10.75rem);
+    padding: 1.05rem;
+    margin-top: 0.35rem;
   }
 
   .home-hero .agentic-core strong {
-    font-size: clamp(1.75rem, 8vw, 2.35rem);
+    font-size: clamp(1.45rem, 6.8vw, 2rem);
   }
 
   .home-hero .agent-node {
-    width: min(42%, 11.5rem);
-    padding: 0.78rem;
-    border-radius: 18px;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    padding: 0.68rem;
+    border-radius: 16px;
   }
 
   .home-hero .agent-node strong {
-    font-size: 0.88rem;
+    font-size: 0.76rem;
   }
 
   .home-hero .agent-node span {
-    font-size: 0.58rem;
+    font-size: 0.52rem;
+  }
+
+  .home-hero .node-portfolio,
+  .home-hero .node-documents,
+  .home-hero .node-workflows,
+  .home-hero .node-intelligence {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .home-hero .node-portfolio {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .home-hero .node-documents {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .home-hero .node-workflows {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .home-hero .node-intelligence {
+    grid-column: 2;
+    grid-row: 3;
   }
 
   .container {
