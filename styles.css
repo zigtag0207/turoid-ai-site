@@ -835,41 +835,54 @@ section[id] {
 }
 
 .home-hero {
-  padding: clamp(1.85rem, 3.2vw, 2.9rem) 0 clamp(2.6rem, 4vw, 3.8rem);
+  padding: clamp(0.9rem, 1.7vw, 1.45rem) 0 clamp(2.6rem, 4vw, 3.8rem);
 }
 
 .home-hero .hero-grid {
   grid-template-columns: minmax(0, 1fr);
-  gap: clamp(1rem, 1.7vw, 1.45rem);
+  gap: clamp(1.05rem, 1.55vw, 1.4rem);
   align-items: start;
   justify-items: center;
   text-align: center;
 }
 
 .home-hero .hero-copy {
-  grid-row: 2;
+  grid-row: 1;
   display: grid;
   justify-items: center;
-  max-width: 64rem;
+  max-width: 72rem;
 }
 
 .home-hero.hero h1 {
-  max-width: 38ch;
-  font-size: clamp(2.65rem, 3.65vw, 3.25rem);
-  line-height: 0.96;
+  max-width: 19ch;
+  font-size: clamp(3.25rem, 5.8vw, 5.55rem);
+  line-height: 0.91;
   letter-spacing: -0.045em;
 }
 
+.home-hero .hero-support {
+  grid-row: 3;
+  display: grid;
+  justify-items: center;
+  max-width: 76rem;
+  margin-top: 0.05rem;
+}
+
+.home-hero .hero-support.reveal {
+  opacity: 1;
+  transform: none;
+}
+
 .home-hero .hero-lede {
-  max-width: 74ch;
-  margin-top: 0.9rem;
+  max-width: 76ch;
+  margin-top: 0;
   font-size: clamp(1rem, 1.1vw, 1.1rem);
 }
 
 .home-hero .hero-actions {
   justify-content: center;
   gap: 0.52rem;
-  margin-top: 1.12rem;
+  margin-top: 1.2rem;
 }
 
 .home-hero .hero-actions .button-ghost {
@@ -881,7 +894,7 @@ section[id] {
 .home-hero .hero-proof {
   justify-content: center;
   gap: 0.55rem;
-  margin-top: 0.88rem;
+  margin-top: 0.95rem;
 }
 
 .home-hero .hero-proof span {
@@ -893,8 +906,8 @@ section[id] {
 }
 
 .home-hero .hero-visual {
-  grid-row: 1;
-  width: min(100%, 48rem);
+  grid-row: 2;
+  width: min(100%, 61rem);
   min-width: 0;
 }
 
@@ -908,15 +921,16 @@ section[id] {
 }
 
 .home-hero .agentic-visual {
-  min-height: clamp(21rem, 30vw, 25.75rem);
+  min-height: clamp(22rem, 29vw, 27.25rem);
   background:
-    radial-gradient(circle at 50% 46%, rgba(13, 92, 99, 0.31), transparent 16rem),
-    radial-gradient(circle at 80% 18%, rgba(211, 159, 67, 0.2), transparent 14rem),
-    linear-gradient(150deg, rgba(255, 255, 255, 0.95), rgba(233, 228, 217, 0.78));
+    radial-gradient(circle at 50% 49%, rgba(13, 92, 99, 0.28), transparent 17rem),
+    radial-gradient(circle at 18% 30%, rgba(255, 255, 255, 0.78), transparent 15rem),
+    radial-gradient(circle at 82% 24%, rgba(211, 159, 67, 0.18), transparent 15rem),
+    linear-gradient(150deg, rgba(255, 255, 255, 0.95), rgba(232, 226, 214, 0.8));
 }
 
 .home-hero .agentic-core {
-  width: min(35%, 13.8rem);
+  width: min(27%, 13.3rem);
 }
 
 .home-hero .agentic-core strong {
@@ -924,28 +938,35 @@ section[id] {
 }
 
 .home-hero .agent-node {
-  width: min(28%, 11.4rem);
+  display: grid;
+  align-content: center;
+  width: min(24%, 13.25rem);
+  min-height: 6.2rem;
   background: rgba(11, 16, 21, 0.86);
 }
 
+.home-hero .agent-node strong {
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+}
+
 .home-hero .node-portfolio {
-  top: 12%;
-  left: 8.5%;
+  top: 15%;
+  left: 6.75%;
 }
 
 .home-hero .node-documents {
-  top: 13%;
-  right: 8%;
+  top: 15%;
+  right: 6.75%;
 }
 
 .home-hero .node-intelligence {
-  right: 9%;
-  bottom: 11%;
+  right: 6.75%;
+  bottom: 15%;
 }
 
 .home-hero .node-workflows {
-  left: 8%;
-  bottom: 12%;
+  left: 6.75%;
+  bottom: 15%;
 }
 
 .dashboard-kicker,
@@ -2408,7 +2429,7 @@ section[id] {
 
 @media (max-width: 640px) {
   .home-hero {
-    padding-top: 2.55rem;
+    padding-top: 1.85rem;
   }
 
   .home-hero.hero h1 {
