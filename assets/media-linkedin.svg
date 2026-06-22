@@ -1,0 +1,20 @@
+<svg width="480" height="320" viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title-linkedin desc-linkedin">
+  <title id="title-linkedin">LinkedIn preview</title>
+  <desc id="desc-linkedin">Preview image showing LinkedIn coverage and company updates.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1723" />
+      <stop offset="100%" stop-color="#1a2a41" />
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" rx="28" fill="url(#bg3)" />
+  <rect x="32" y="32" width="416" height="176" rx="20" fill="#162238" opacity="0.96" />
+  <circle cx="76" cy="80" r="28" fill="#0a66c2" />
+  <text x="110" y="88" fill="#f5f2ea" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">LinkedIn</text>
+  <text x="32" y="126" fill="#d9d4c4" font-family="Inter, Arial, sans-serif" font-size="16">Founder story and company updates.</text>
+  <line x1="32" y1="154" x2="240" y2="154" stroke="#f5f2ea" stroke-width="1" opacity="0.18" />
+  <text x="32" y="188" fill="#bec4d2" font-family="Inter, Arial, sans-serif" font-size="14">Social post insight from Turoid’s leadership.</text>
+  <rect x="32" y="218" width="140" height="16" rx="8" fill="#f5f2ea" opacity="0.2" />
+  <rect x="32" y="246" width="180" height="14" rx="7" fill="#f5f2ea" opacity="0.14" />
+  <rect x="32" y="268" width="160" height="14" rx="7" fill="#f5f2ea" opacity="0.14" />
+</svg>
