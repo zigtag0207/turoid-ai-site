@@ -193,9 +193,14 @@ if (langOptions.length > 0) {
 }
 
 if (navToggle && mobileNavPanel) {
+  const openLabel =
+    navToggle.getAttribute("data-open-label") || "Open mobile menu";
+  const closeLabel =
+    navToggle.getAttribute("data-close-label") || "Close mobile menu";
+
   const setMobileNavState = (isOpen) => {
     navToggle.setAttribute("aria-expanded", String(isOpen));
-    navToggle.setAttribute("aria-label", isOpen ? "Close mobile menu" : "Open mobile menu");
+    navToggle.setAttribute("aria-label", isOpen ? closeLabel : openLabel);
     mobileNavPanel.classList.toggle("is-open", isOpen);
     mobileNavPanel.setAttribute("aria-hidden", String(!isOpen));
   };
