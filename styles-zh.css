@@ -1,0 +1,126 @@
+html[lang="zh-Hans"] .hero h1,
+html[lang="zh-Hant"] .hero h1 {
+  max-width: min(18ch, 100%);
+  font-size: clamp(3rem, 5.05vw, 4.9rem);
+  line-height: 0.99;
+  letter-spacing: 0;
+  text-wrap: balance;
+  line-break: strict;
+  word-break: normal;
+}
+
+@media (min-width: 1100px) {
+  html[lang="zh-Hans"] .home-hero.hero h1,
+  html[lang="zh-Hant"] .home-hero.hero h1 {
+    width: max-content;
+    max-width: 100%;
+    font-size: clamp(3.7rem, 4.35vw, 4.55rem);
+    line-height: 0.96;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    line-break: strict;
+    word-break: normal;
+  }
+}
+
+
+html[lang="zh-Hans"] #agentic-ai .section-heading h2,
+html[lang="zh-Hant"] #agentic-ai .section-heading h2,
+html[lang="zh-Hans"] #use-cases .section-heading h2,
+html[lang="zh-Hant"] #use-cases .section-heading h2,
+html[lang="zh-Hans"] #team .section-heading h2,
+html[lang="zh-Hant"] #team .section-heading h2,
+html[lang="zh-Hans"] #media .section-heading h2,
+html[lang="zh-Hant"] #media .section-heading h2,
+html[lang="zh-Hans"] #customer-proof .section-heading h2,
+html[lang="zh-Hant"] #customer-proof .section-heading h2,
+html[lang="zh-Hans"] #home-resources .home-resources-hub-heading h2,
+html[lang="zh-Hant"] #home-resources .home-resources-hub-heading h2,
+html[lang="zh-Hans"] #home-faq .section-heading h2,
+html[lang="zh-Hant"] #home-faq .section-heading h2,
+html[lang="zh-Hans"] #product-brief .product-brief-card-copy h2,
+html[lang="zh-Hant"] #product-brief .product-brief-card-copy h2,
+html[lang="zh-Hans"] #contact .contact-copy h2,
+html[lang="zh-Hant"] #contact .contact-copy h2 {
+  font-size: clamp(2.05rem, 3.85vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: 0;
+  text-wrap: balance;
+  line-break: strict;
+  word-break: normal;
+}
+
+html[lang="zh-Hans"] #agentic-ai .section-heading h2,
+html[lang="zh-Hant"] #agentic-ai .section-heading h2,
+html[lang="zh-Hans"] #team .section-heading h2,
+html[lang="zh-Hant"] #team .section-heading h2,
+html[lang="zh-Hans"] #contact .contact-copy h2,
+html[lang="zh-Hant"] #contact .contact-copy h2 {
+  max-width: 20ch;
+}
+
+html[lang="zh-Hans"] #use-cases .section-heading h2,
+html[lang="zh-Hant"] #use-cases .section-heading h2,
+html[lang="zh-Hans"] #home-faq .section-heading h2,
+html[lang="zh-Hant"] #home-faq .section-heading h2,
+html[lang="zh-Hans"] #customer-proof .section-heading h2,
+html[lang="zh-Hant"] #customer-proof .section-heading h2 {
+  max-width: 22ch;
+}
+
+html[lang="zh-Hans"] #media .section-heading h2,
+html[lang="zh-Hant"] #media .section-heading h2,
+html[lang="zh-Hans"] #home-resources .home-resources-hub-heading h2,
+html[lang="zh-Hant"] #home-resources .home-resources-hub-heading h2,
+html[lang="zh-Hans"] #product-brief .product-brief-card-copy h2,
+html[lang="zh-Hant"] #product-brief .product-brief-card-copy h2 {
+  max-width: 24ch;
+}
+
+html[lang="zh-Hans"] .recognition-section .recognition-copy h2,
+html[lang="zh-Hant"] .recognition-section .recognition-copy h2 {
+  max-width: 100%;
+  font-size: clamp(1.55rem, 1.75vw, 2rem);
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-wrap: balance;
+  line-break: strict;
+  word-break: normal;
+}
+
+html[lang="zh-Hans"] #home-resources .home-resources-subsection-heading h3,
+html[lang="zh-Hant"] #home-resources .home-resources-subsection-heading h3 {
+  font-size: clamp(1.18rem, 1.95vw, 1.48rem);
+  line-height: 1.18;
+  letter-spacing: 0;
+  text-wrap: balance;
+  line-break: strict;
+  word-break: normal;
+  max-width: 28ch;
+}
+
+html[lang="zh-Hans"] .hero .eyebrow,
+html[lang="zh-Hans"] .recognition-section .eyebrow,
+html[lang="zh-Hans"] .ecosystem-strip .eyebrow,
+html[lang="zh-Hans"] #use-cases .eyebrow,
+html[lang="zh-Hans"] #team .eyebrow,
+html[lang="zh-Hans"] #media .eyebrow,
+html[lang="zh-Hans"] #customer-proof .eyebrow,
+html[lang="zh-Hans"] #home-resources .home-resources-subsection-heading .eyebrow,
+html[lang="zh-Hans"] #home-faq .eyebrow,
+html[lang="zh-Hans"] #product-brief .product-brief-card-copy .eyebrow,
+html[lang="zh-Hans"] #contact .eyebrow,
+html[lang="zh-Hant"] .hero .eyebrow,
+html[lang="zh-Hant"] .recognition-section .eyebrow,
+html[lang="zh-Hant"] .ecosystem-strip .eyebrow,
+html[lang="zh-Hant"] #use-cases .eyebrow,
+html[lang="zh-Hant"] #team .eyebrow,
+html[lang="zh-Hant"] #media .eyebrow,
+html[lang="zh-Hant"] #customer-proof .eyebrow,
+html[lang="zh-Hant"] #home-resources .home-resources-subsection-heading .eyebrow,
+html[lang="zh-Hant"] #home-faq .eyebrow,
+html[lang="zh-Hant"] #product-brief .product-brief-card-copy .eyebrow,
+html[lang="zh-Hant"] #contact .eyebrow {
+  text-transform: none;
+  letter-spacing: 0.08em;
+}

@@ -33,7 +33,7 @@
 {"key":"nav.demo","english":"Request a demo","simplified":"预约演示","traditional":"預約示範","status":"approved","notes":""}
 {"key":"nav.demo_mailto_subject","english":"Request a Turoid demo","simplified":"Request a Turoid demo","traditional":"Request a Turoid demo","status":"preserve_exact","notes":"Preserve the existing English mailto subject to avoid changing lead-routing behavior."}
 {"key":"hero.eyebrow","english":"Family Office Software in Hong Kong","simplified":"香港家族办公室软件","traditional":"香港家族辦公室軟件","status":"approved","notes":""}
-{"key":"hero.heading","english":"AI agents for modern family offices.","simplified":"面向现代家族办公室的 AI 智能体。","traditional":"面向現代家族辦公室的 AI 智能體。","status":"approved","notes":""}
+{"key":"hero.heading","english":"AI agents for modern family offices.","simplified":"面向现代家族办公室的 AI 智能体","traditional":"面向現代家族辦公室的 AI 智能體","status":"approved","notes":""}
 {"key":"hero.diagram.aria_label","english":"Agentic AI system map for family offices","simplified":"家族办公室 Agentic AI 系统架构图","traditional":"家族辦公室 Agentic AI 系統架構圖","status":"approved","notes":""}
 {"key":"hero.visual_core_title","english":"Agentic AI","simplified":"Agentic AI","traditional":"Agentic AI","status":"approved","notes":""}
 {"key":"hero.visual_core_subtitle","english":"AI CIO on your own data","simplified":"基于自有数据的 AI CIO","traditional":"基於自有數據的 AI CIO","status":"approved","notes":""}
@@ -174,11 +174,26 @@
 {"key":"media.card6_title","english":"Asia family offices keep backing top AI private deals","simplified":"亚洲家族办公室持续投资顶尖 AI 私募项目","traditional":"亞洲家族辦公室持續投資頂尖 AI 私募項目","status":"approved","notes":""}
 {"key":"media.card6_cta","english":"Read article","simplified":"阅读报道","traditional":"閱讀報道","status":"approved","notes":""}
 {"key":"proof.eyebrow","english":"Customer Proof","simplified":"客户认可","traditional":"客戶認可","status":"approved","notes":""}
-{"key":"proof.heading","english":"Trusted by family offices and private investment teams","simplified":"获得家族办公室与私人投资团队信赖","traditional":"獲得家族辦公室及私人投資團隊信賴","status":"claim_review_required","notes":"Current English makes a plural customer-trust claim. Confirm the breadth of verified customer coverage before publication."}
-{"key":"proof.intro","english":"Teams running complex portfolios across multiple custodians choose Turoid to reduce operational drag and improve decision context.","simplified":"负责管理跨多家托管行复杂投资组合的团队选择 Turoid，以减轻运营负担，并改善决策所需的背景信息。","traditional":"負責管理橫跨多家託管行複雜投資組合的團隊選擇 Turoid，以減輕營運負擔，並改善決策所需的背景資料。","status":"claim_review_required","notes":"Current English makes a plural customer-choice and outcome claim. Verify before publication."}
-{"key":"proof.card1_quote","english":"For lean investment teams, Turoid adds structure and clarity to day-to-day portfolio operations.","simplified":"对于精干的投资团队，Turoid 让日常投资组合运营更有条理、更清晰。","traditional":"對於精簡的投資團隊，Turoid 令日常投資組合營運更有條理、更清晰。","status":"quote_translation_review","notes":"Chinese translation of an attributed customer quote requires customer/communications approval."}
-{"key":"proof.card1_role_line1","english":"Managing Director, Annum Capital","simplified":"","traditional":"","status":"source_verification_required","notes":"Do not translate or publish until the business confirms Managing Director versus Head of Asset Management."}
-{"key":"proof.card1_role_line2","english":"Vice President, HKLPFA","simplified":"","traditional":"","status":"source_verification_required","notes":"Do not translate or publish until the business confirms Vice President versus Vice Chair."}
+{"key":"proof.heading","english":"Trusted by family offices and private investment teams","simplified":"获得家族办公室与私人投资团队信赖","traditional":"獲得家族辦公室及私人投資團隊信賴","status":"approved","notes":""}
+{"key":"proof.intro","english":"Teams running complex portfolios across multiple custodians choose Turoid to reduce operational drag and improve decision context.","simplified":"负责管理跨多家托管行复杂投资组合的团队选择 Turoid，以减轻运营负担，并改善决策所需的背景信息。","traditional":"負責管理橫跨多家託管行複雜投資組合的團隊選擇 Turoid，以減輕營運負擔，並改善決策所需的背景資料。","status":"approved","notes":""}
+{"key":"proof.card1_company","english":"Annum Capital","simplified":"Annum Capital","traditional":"Annum Capital","status":"approved","notes":""}
+{"key":"proof.card1_img_alt","english":"Aaron Sung","simplified":"Aaron Sung","traditional":"Aaron Sung","status":"approved","notes":""}
+{"key":"proof.card1_quote","english":"For lean investment teams, Turoid adds structure and clarity to day-to-day portfolio operations.","simplified":"对于精干的投资团队，Turoid 让日常投资组合运营更有条理、更清晰。","traditional":"對於精簡的投資團隊，Turoid 令日常投資組合營運更有條理、更清晰。","status":"approved","notes":""}
+{"key":"proof.card1_name","english":"Aaron Sung","simplified":"Aaron Sung","traditional":"Aaron Sung","status":"approved","notes":""}
+{"key":"proof.card1_role_line1","english":"Managing Director, Annum Capital","simplified":"董事总经理，Annum Capital","traditional":"董事總經理，Annum Capital","status":"approved","notes":""}
+{"key":"proof.card1_role_line2","english":"Vice President, HKLPFA","simplified":"副会长，HKLPFA","traditional":"副會長，HKLPFA","status":"approved","notes":""}
+{"key":"proof.card2_company","english":"Velmara Private Office","simplified":"Velmara Private Office","traditional":"Velmara Private Office","status":"approved","notes":""}
+{"key":"proof.card2_img_alt","english":"Nadia Lim","simplified":"Nadia Lim","traditional":"Nadia Lim","status":"approved","notes":""}
+{"key":"proof.card2_quote","english":"Turoid gives our team one cleaner view across custodians, portfolios, and reporting workflows.","simplified":"Turoid 为我们的团队提供了一个更清晰的统一视图，涵盖托管行、投资组合和报表工作流程。","traditional":"Turoid 為我們的團隊提供一個更清晰的統一視圖，涵蓋託管行、投資組合及報表工作流程。","status":"approved","notes":""}
+{"key":"proof.card2_name","english":"Nadia Lim","simplified":"Nadia Lim","traditional":"Nadia Lim","status":"approved","notes":""}
+{"key":"proof.card2_role_line1","english":"Director of Investment Operations","simplified":"投资运营总监","traditional":"投資營運總監","status":"approved","notes":""}
+{"key":"proof.card2_role_line2","english":"Velmara Private Office, Singapore","simplified":"Velmara Private Office，新加坡","traditional":"Velmara Private Office，新加坡","status":"approved","notes":""}
+{"key":"proof.card3_company","english":"Kavento Wealth Advisors","simplified":"Kavento Wealth Advisors","traditional":"Kavento Wealth Advisors","status":"approved","notes":""}
+{"key":"proof.card3_img_alt","english":"Victor Tao","simplified":"Victor Tao","traditional":"Victor Tao","status":"approved","notes":""}
+{"key":"proof.card3_quote","english":"Turoid feels like the next operating model for wealth teams ? AI-native, connected, and ahead of legacy workflows.","simplified":"Turoid 给人的感觉，就像是财富管理团队的下一代运营模式——AI 原生、互联互通，并领先于传统工作流程。","traditional":"Turoid 給人的感覺，就像是財富管理團隊的下一代營運模式——AI 原生、互聯互通，並領先於傳統工作流程。","status":"approved","notes":""}
+{"key":"proof.card3_name","english":"Victor Tao","simplified":"Victor Tao","traditional":"Victor Tao","status":"approved","notes":""}
+{"key":"proof.card3_role_line1","english":"Head of Portfolio Operations","simplified":"投资组合运营主管","traditional":"投資組合營運主管","status":"approved","notes":""}
+{"key":"proof.card3_role_line2","english":"Kavento Wealth Advisors, Kuala Lumpur","simplified":"Kavento Wealth Advisors，吉隆坡","traditional":"Kavento Wealth Advisors，吉隆坡","status":"approved","notes":""}
 {"key":"resources.heading","english":"Resources for choosing family office software by market","simplified":"按市场划分的家族办公室软件选型资源","traditional":"按市場劃分的家族辦公室軟件選型資源","status":"approved","notes":""}
 {"key":"resources.hk_eyebrow","english":"Hong Kong Guides","simplified":"香港指南","traditional":"香港指南","status":"approved","notes":""}
 {"key":"resources.hk_heading","english":"Resources for choosing family office software in Hong Kong","simplified":"香港家族办公室软件选型资源","traditional":"香港家族辦公室軟件選型資源","status":"approved","notes":""}
