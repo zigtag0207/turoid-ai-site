@@ -299,6 +299,8 @@
 {"key":"contact.eyebrow","english":"Contact","simplified":"联系我们","traditional":"聯絡我們","status":"approved","notes":""}
 {"key":"contact.heading","english":"Request a demo, consultation, or simply connect with the team","simplified":"预约演示、咨询，或直接联系团队","traditional":"預約示範、諮詢，或直接聯絡團隊","status":"approved","notes":""}
 {"key":"contact.intro","english":"Turoid is based in Sheung Wan, Hong Kong and is currently focused on helping family offices modernize how investment and operations teams work.","simplified":"Turoid 设于香港 Sheung Wan，目前专注于帮助家族办公室推进投资与运营团队工作方式的现代化。","traditional":"Turoid 設於香港 Sheung Wan，目前專注協助家族辦公室推進投資及營運團隊工作方式的現代化。","status":"business_fact_review_required","notes":"Contains current business-location and business-focus claims. Verify before publication."}
+{"key":"contact.address_line1","english":"2-12 Queen's Road West, Sheung Wan, Hong Kong","simplified":"香港上环皇后大道西2-12号","traditional":"香港上環皇后大道西2-12號","status":"approved","notes":""}
+{"key":"contact.address_line2","english":"Room 2601, 26/F, Arion Commercial Centre","simplified":"联发商业中心26楼2601室","traditional":"聯發商業中心26樓2601室","status":"approved","notes":""}
 {"key":"contact.email_cta","english":"Email Turoid","simplified":"邮件联系 Turoid","traditional":"電郵聯絡 Turoid","status":"approved","notes":""}
 {"key":"contact.email_subject","english":"Turoid Website Inquiry","simplified":"Turoid Website Inquiry","traditional":"Turoid Website Inquiry","status":"preserve_exact","notes":"Preserve the existing English mailto subject to avoid changing mail-routing behavior."}
 {"key":"contact.linkedin_cta","english":"Company LinkedIn","simplified":"Turoid LinkedIn 主页","traditional":"Turoid LinkedIn 專頁","status":"approved","notes":""}
