@@ -880,7 +880,9 @@ section[id] {
 }
 
 .home-hero {
-  padding: clamp(0.9rem, 1.7vw, 1.45rem) 0 clamp(2.6rem, 4vw, 3.8rem);
+  min-height: auto;
+  align-items: start;
+  padding: clamp(3rem, 5vw, 4.25rem) 0 clamp(2.6rem, 4vw, 3.8rem);
 }
 
 .home-hero .hero-grid {
