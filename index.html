@@ -15,6 +15,10 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#0b1015" />
     <link rel="canonical" href="https://www.turoid.ai/" />
+    <link rel="alternate" hreflang="en" href="https://www.turoid.ai/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://www.turoid.ai/zh-hans/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://www.turoid.ai/zh-hant/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.turoid.ai/" />
     <meta property="og:title" content="Turoid | Family Office Software & Agentic AI" />
     <meta
       property="og:description"
@@ -40,6 +44,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="/styles-language.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -148,7 +153,7 @@
             <img src="/assets/turoid-logo.png" alt="Turoid logo" />
           </a>
 
-          <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open mobile menu">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open mobile menu" data-open-label="Open mobile menu" data-close-label="Close mobile menu">
             Menu
             <span aria-hidden="true">▾</span>
           </button>
@@ -186,6 +191,14 @@
           </nav>
 
           <div class="header-actions">
+            <details class="language-switcher">
+              <summary aria-label="Select language">English</summary>
+              <nav class="language-switcher-menu" aria-label="Language options">
+                <a href="/" lang="en" hreflang="en" aria-current="page">English</a>
+                <a href="/zh-hans/" lang="zh-Hans" hreflang="zh-Hans">&#31616;&#20307;&#20013;&#25991;</a>
+                <a href="/zh-hant/" lang="zh-Hant" hreflang="zh-Hant">&#32321;&#39636;&#20013;&#25991;</a>
+              </nav>
+            </details>
             <a class="button button-small" href="mailto:hello@turoid.ai?subject=Request%20a%20Turoid%20demo">
               Request a demo
             </a>
@@ -214,6 +227,11 @@
             <a href="/#team">Team</a>
             <a href="/#contact">Contact</a>
           </details>
+          <nav class="mobile-language-links" aria-label="Language">
+            <a href="/" lang="en" hreflang="en" aria-current="page">English</a>
+            <a href="/zh-hans/" lang="zh-Hans" hreflang="zh-Hans">&#31616;&#20307;&#20013;&#25991;</a>
+            <a href="/zh-hant/" lang="zh-Hant" hreflang="zh-Hant">&#32321;&#39636;&#20013;&#25991;</a>
+          </nav>
           <div class="mobile-nav-actions">
             <a class="button button-small" href="mailto:hello@turoid.ai?subject=Request%20a%20Turoid%20demo">Request a demo</a>
           </div>
@@ -771,37 +789,6 @@
               </article>
             </div>
 
-            <div class="section-heading reveal">
-              <p class="eyebrow">Singapore Guides</p>
-              <h2>Resources for choosing family office software in Singapore</h2>
-              <p>
-                Practical pages for Singapore wealth teams comparing software, reporting,
-                alternatives, document AI, Excel risk, and controlled AI workflows.
-              </p>
-            </div>
-
-            <div class="seo-link-grid">
-              <a class="resource-card reveal" href="./family-office-software-singapore/">
-                <span>Singapore</span>
-                <h3>Family Office Software Singapore</h3>
-                <p>The Singapore hub for reporting, alternatives, document AI, controls, and CIO workflows.</p>
-              </a>
-              <a class="resource-card reveal" href="./best-family-office-software-singapore/">
-                <span>Comparison</span>
-                <h3>Best Family Office Software Singapore</h3>
-                <p>Compare Turoid, global platforms, administration tools, and spreadsheet-heavy workflows.</p>
-              </a>
-              <a class="resource-card reveal" href="./family-office-reporting-software-singapore/">
-                <span>Reporting</span>
-                <h3>Family Office Reporting Software Singapore</h3>
-                <p>Targeted workflows for private-bank data, alternatives, documents, and monthly packs.</p>
-              </a>
-              <a class="resource-card reveal" href="./sg-family-office-software-audit/">
-                <span>Free audit</span>
-                <h3>Singapore Family Office Software Audit</h3>
-                <p>A 20-minute review of reporting, Excel risk, alternatives, document AI, and controls.</p>
-              </a>
-            </div>
           </div>
         </section>
 

@@ -1,0 +1,135 @@
+.language-switcher {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.language-switcher summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  list-style: none;
+  padding: 0.72rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.46);
+  color: var(--ink);
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease;
+}
+
+.language-switcher summary::-webkit-details-marker {
+  display: none;
+}
+
+.language-switcher summary::after {
+  content: "";
+  width: 0.42rem;
+  height: 0.42rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-0.08rem) rotate(45deg);
+  transition: transform 180ms ease;
+}
+
+.language-switcher[open] summary::after {
+  transform: translateY(0.08rem) rotate(-135deg);
+}
+
+.language-switcher summary:hover {
+  border-color: var(--line-strong);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.language-switcher summary:focus-visible,
+.language-switcher-menu a:focus-visible,
+.mobile-language-links a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.language-switcher-menu {
+  position: absolute;
+  top: calc(100% + 0.7rem);
+  right: 0;
+  z-index: 36;
+  display: grid;
+  min-width: 9rem;
+  padding: 0.5rem;
+  border: 1px solid rgba(17, 20, 24, 0.08);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 40px rgba(34, 40, 48, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.language-switcher-menu a {
+  display: block;
+  padding: 0.72rem 0.9rem;
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  white-space: nowrap;
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.language-switcher-menu a:hover,
+.language-switcher-menu a:focus-visible,
+.mobile-language-links a:hover,
+.mobile-language-links a:focus-visible {
+  background: rgba(13, 92, 99, 0.08);
+  color: var(--ink-deep);
+}
+
+.language-switcher-menu a[aria-current="page"],
+.mobile-language-links a[aria-current="page"] {
+  font-weight: 700;
+  background: rgba(13, 92, 99, 0.1);
+}
+
+.mobile-language-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin: 0.15rem 0 0.85rem;
+}
+
+.mobile-language-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
+  padding: 0.68rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+  text-align: center;
+  white-space: nowrap;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+
+@media (max-width: 980px) {
+  .language-switcher {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .language-switcher summary,
+  .language-switcher summary::after,
+  .language-switcher-menu a,
+  .mobile-language-links a {
+    transition: none;
+  }
+}
