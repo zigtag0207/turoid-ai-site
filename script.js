@@ -52,6 +52,7 @@ if (mediaCarousel && mediaPages.length > 0 && mediaPrevButton && mediaNextButton
 const revealItems = document.querySelectorAll(".reveal");
 const navToggle = document.querySelector(".nav-toggle");
 const mobileNavPanel = document.querySelector("#mobile-nav-panel");
+const siteHeader = document.querySelector(".site-header");
 const desktopDropdowns = document.querySelectorAll(".site-nav .nav-dropdown");
 const desktopNavTriggers = document.querySelectorAll(".site-nav .nav-trigger");
 const mobileNavGroups = document.querySelectorAll(".mobile-nav-group");
@@ -198,11 +199,32 @@ if (navToggle && mobileNavPanel) {
   const closeLabel =
     navToggle.getAttribute("data-close-label") || "Close mobile menu";
 
+  const setMobileNavOpenClass = (isOpen) => {
+    document.documentElement.classList.toggle("mobile-nav-open", isOpen);
+    document.body.classList.toggle("mobile-nav-open", isOpen);
+  };
+
+  const updateMobileNavAvailableHeight = () => {
+    const viewportHeight = Math.floor(window.visualViewport?.height || window.innerHeight || 0);
+    const headerBottom = siteHeader instanceof HTMLElement ? siteHeader.getBoundingClientRect().bottom : 0;
+    const availableHeight = Math.max(0, Math.floor(viewportHeight - headerBottom));
+    mobileNavPanel.style.setProperty("--mobile-nav-available-height", `${availableHeight}px`);
+  };
+
   const setMobileNavState = (isOpen) => {
+    if (isOpen) {
+      updateMobileNavAvailableHeight();
+      setMobileNavOpenClass(true);
+    }
+
     navToggle.setAttribute("aria-expanded", String(isOpen));
     navToggle.setAttribute("aria-label", isOpen ? closeLabel : openLabel);
     mobileNavPanel.classList.toggle("is-open", isOpen);
     mobileNavPanel.setAttribute("aria-hidden", String(!isOpen));
+
+    if (!isOpen) {
+      setMobileNavOpenClass(false);
+    }
   };
 
   navToggle.addEventListener("click", () => {
@@ -213,11 +235,17 @@ if (navToggle && mobileNavPanel) {
   const syncMobilePanelForViewport = () => {
     if (window.matchMedia("(min-width: 981px)").matches) {
       setMobileNavState(false);
+      return;
+    }
+
+    if (navToggle.getAttribute("aria-expanded") === "true") {
+      updateMobileNavAvailableHeight();
     }
   };
 
   syncMobilePanelForViewport();
   window.addEventListener("resize", syncMobilePanelForViewport);
+  window.visualViewport?.addEventListener("resize", syncMobilePanelForViewport);
 
   mobileNavPanel.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => setMobileNavState(false));
